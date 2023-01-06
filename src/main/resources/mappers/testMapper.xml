@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- com.mpd.mypetdiary.mapper 와 매핑됨-->
+<mapper namespace="com.mpd.mypetdiary.mapper.TestMapper">
+    <select id="getTestEmail" resultType="String">
+       SELECT
+           MEMBER_EMAIL
+       FROM
+           MEMBER
+       WHERE
+           MEMBER_ID='test'
+    </select>
+
+    <select id="getTestData" resultType="com.mpd.mypetdiary.dto.TestDTO">
+        SELECT
+            MEMBER_ID,
+            MEMBER_PW,
+            MEMBER_NAME,
+            MEMBER_BDATE,
+            MEMBER_PHONE,
+            MEMBER_EMAIL,
+            MEMBER_REGDATE,
+            MEMBER_PROFILE,
+            MEMBER_NICKNAME
+        FROM
+            MEMBER
+        WHERE
+            MEMBER_ID='test'
+
+    </select>
+</mapper>
