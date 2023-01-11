@@ -1,7 +1,7 @@
 package com.mpd.mypetdiary.service;
 
 import com.mpd.mypetdiary.data.Account;
-import com.mpd.mypetdiary.repository.AccountRepository;
+import com.mpd.mypetdiary.dao.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

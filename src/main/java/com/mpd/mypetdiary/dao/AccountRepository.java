@@ -1,4 +1,4 @@
-package com.mpd.mypetdiary.repository;
+package com.mpd.mypetdiary.dao;
 
 import com.mpd.mypetdiary.data.Account;
 import com.mpd.mypetdiary.mapper.AccountMapper;

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>메인 페이지</title>
+</head>
+<body>
+    <button onclick="fn_test()">
+        <h2>테스트 데이터</h2>
+    </button>
+    <br><br>
+    <table id="testDataSpace"></table>
+</body>
+
+<script>
+    function fn_test(){
+        $.ajax({
+            type : "GET",
+            url : "/test",
+            success: function(data){
+                const testData = JSON.parse(data);
+                var testDataSpace = $("#testDataSpace").empty();
+                var str = "";
+                for (data in testData){
+                    str += "<tr><td><b>" + data + "</b></td><td>" + testData[data] + "</td></tr>";
+                }
+                $("#testDataSpace").append(str);
+            },
+            error: function(data){
+                alert(data);
+                console.log("data : ' " + data + " '");
+            }
+        });
+    }
+
+</script>
+</html>

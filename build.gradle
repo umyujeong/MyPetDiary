@@ -7,7 +7,6 @@ plugins {
 
 group = 'com.mpd'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
 
 configurations {
     compileOnly {
@@ -36,6 +35,11 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-security'
     implementation "io.jsonwebtoken:jjwt:0.9.1"
 
+    implementation 'com.google.code.gson:gson:2.10'
+
+    // thymeleaf implementation //
+//    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+//    implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
 }
 
 tasks.named('test') {

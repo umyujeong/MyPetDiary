@@ -82,4 +82,5 @@ public class TestDTO {
     public void setMember_nickname(String member_nickname) {
         this.member_nickname = member_nickname;
     }
+
 }
