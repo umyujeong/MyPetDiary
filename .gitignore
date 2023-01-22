@@ -25,7 +25,10 @@ bin/
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
+
 application-db.properties
+application-jwt.properties
+
 **/src/main/**/configuration/*
 
 
