@@ -15,7 +15,7 @@ public class AccountRepository {
 
     public Account save(Account account, String role){
         accountMapper.insertUser(account);
-        accountMapper.insertUserAutority(account.getUsername(), role);
+        accountMapper.insertUserAuthority(account.getUsername(), role);
         return account;
     }
 
@@ -24,6 +24,6 @@ public class AccountRepository {
     }
 
     public List <String> findAuthoritiesById(String username){
-        return accountMapper.readAutorities(username);
+        return accountMapper.readAuthorities(username);
     }
 }

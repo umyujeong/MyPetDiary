@@ -1,6 +1,6 @@
 package com.mpd.mypetdiary.dto;
 
-public class TestDTO {
+public class TestDto {
     String member_id;
     String member_pw;
     String member_name;

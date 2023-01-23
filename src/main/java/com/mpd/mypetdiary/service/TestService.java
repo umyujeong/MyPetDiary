@@ -1,8 +1,8 @@
 package com.mpd.mypetdiary.service;
 
-import com.mpd.mypetdiary.dto.TestDTO;
+import com.mpd.mypetdiary.dto.TestDto;
 
 public interface TestService {
-    public TestDTO getTestData();
+    public TestDto getTestData();
     public String getTestEmail();
 }

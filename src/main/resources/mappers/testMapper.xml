@@ -11,7 +11,7 @@
            MEMBER_ID='test'
     </select>
 
-    <select id="getTestData" resultType="com.mpd.mypetdiary.dto.TestDTO">
+    <select id="getTestData" resultType="com.mpd.mypetdiary.dto.TestDto">
         SELECT
             MEMBER_ID,
             MEMBER_PW,

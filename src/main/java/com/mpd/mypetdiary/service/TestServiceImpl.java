@@ -1,6 +1,6 @@
 package com.mpd.mypetdiary.service;
 
-import com.mpd.mypetdiary.dto.TestDTO;
+import com.mpd.mypetdiary.dto.TestDto;
 import com.mpd.mypetdiary.mapper.TestMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,8 +12,8 @@ public class TestServiceImpl implements TestService {
     private TestMapper testMapper;
 
     @Override
-    public TestDTO getTestData() {
-        TestDTO testData = testMapper.getTestData();
+    public TestDto getTestData() {
+        TestDto testData = testMapper.getTestData();
         return testData;
     }
 

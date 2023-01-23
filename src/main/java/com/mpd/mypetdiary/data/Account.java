@@ -1,9 +1,12 @@
 package com.mpd.mypetdiary.data;
 
+import com.mpd.mypetdiary.dao.AccountRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
+import java.util.List;
 
 public class Account implements UserDetails {
     private String id;

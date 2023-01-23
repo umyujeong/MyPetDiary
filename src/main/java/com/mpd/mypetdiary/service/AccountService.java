@@ -88,6 +88,11 @@ public class AccountService implements UserDetailsService {
         return authorities;
     }
 
+    public List<String> getRoles(String username){
+        return accounts.findAuthoritiesById(username);
+    }
+
+
     public Account save(Account account,String role) {
         account.setPassword(passwordEncoder.encode(account.getPassword()));
         account.setAccountNonExpired(true);
@@ -96,4 +101,6 @@ public class AccountService implements UserDetailsService {
         account.setEnabled(true);
         return accounts.save(account, role);
     }
+
+
 }
