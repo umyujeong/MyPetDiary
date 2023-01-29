@@ -4,5 +4,5 @@ import com.mpd.mypetdiary.dto.TestDto;
 
 public interface TestService {
     public TestDto getTestData();
-    public String getTestEmail();
+    public String getTestName();
 }

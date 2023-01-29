@@ -70,7 +70,6 @@ public class AccountService implements UserDetailsService {
             @Override
             public Collection<? extends GrantedAuthority> getAuthorities() {
                 // TODO Auto-generated method stub
-
                 return account.getAuthorities();
             }
         };
@@ -81,8 +80,7 @@ public class AccountService implements UserDetailsService {
     {
         List<String> string_authorities = accounts.findAuthoritiesById(username);
         List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
-        for (String authority : string_authorities)
-        {
+        for (String authority : string_authorities) {
             authorities.add(new SimpleGrantedAuthority(authority));
         }
         return authorities;

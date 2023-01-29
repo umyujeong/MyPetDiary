@@ -1,16 +1,13 @@
 package com.mpd.mypetdiary.data;
 
-import com.mpd.mypetdiary.dao.AccountRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
-import java.util.List;
 
 public class Account implements UserDetails {
-    private String id;
-    private String pw;
+    private String member_id;
+    private String member_pw;
     private boolean isAccountNonExpired;
     private boolean isAccountNonLocked;
     private boolean isCredentialsNonExpired;
@@ -24,20 +21,20 @@ public class Account implements UserDetails {
 
     @Override
     public String getPassword() {
-        return this.pw;
+        return this.member_pw;
     }
 
     @Override
     public String getUsername() {
-        return this.id;
+        return this.member_id;
     }
 
-    public void setUsername(String id) {
-        this.id = id;
+    public void setUsername(String member_id) {
+        this.member_id = member_id;
     }
 
-    public void setPassword(String pw) {
-        this.pw = pw;
+    public void setPassword(String member_pw) {
+        this.member_pw = member_pw;
     }
 
     public void setAccountNonExpired(boolean accountNonExpired) {

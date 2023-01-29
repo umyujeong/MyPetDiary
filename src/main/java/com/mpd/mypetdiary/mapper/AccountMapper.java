@@ -10,18 +10,18 @@ import java.util.List;
 
 @Mapper
 public interface AccountMapper {
-    @Select("SELECT * FROM USER WHERE id=#{id}")
-    Account readAccount(String id);
+    @Select("SELECT * FROM member_spring_security WHERE member_id=#{member_id}")
+    Account readAccount(String member_id);
 
-    @Select("SELECT authority_name FROM AUTHORITY WHERE id=#{id}")
-    List<String> readAuthorities(String id);
+    @Select("SELECT authority_name FROM AUTHORITY WHERE member_id=#{member_id}")
+    List<String> readAuthorities(String member_id);
 
-    @Insert("INSERT INTO USER VALUES(#{account.id},#{account.pw},#{account.isAccountNonExpired},#{account.isAccountNonLocked},#{account.isCredentialsNonExpired},#{account.isEnabled})")
+    @Insert("INSERT INTO member_spring_security VALUES(#{account.member_id},#{account.isAccountNonExpired},#{account.isAccountNonLocked},#{account.isCredentialsNonExpired},#{account.isEnabled},#{account.member_pw})")
     void insertUser(@Param("account") Account account);
 
-    @Insert("INSERT INTO AUTHORITY VALUES(#{id},#{authority})")
-    void insertUserAuthority(@Param("id") String id, @Param("authority") String authority);
+    @Insert("INSERT INTO authority VALUES(#{member_id},#{authority_name})")
+    void insertUserAuthority(@Param("member_id") String member_id, @Param("authority_name") String authority_name);
 
-    @Select("SELECT* FROM USER")
+    @Select("SELECT* FROM member_spring_security")
     List<String> readAllUsers();
 }

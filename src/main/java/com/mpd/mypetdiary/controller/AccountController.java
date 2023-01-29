@@ -39,9 +39,9 @@ public class AccountController {
     // 로그인
     @PostMapping("/login")
     public String login(@RequestBody Map<String, String> user) {
-        String userId = user.get("id");
-        Account member = accountMapper.readAccount(userId);
-        List<String> roles = accountMapper.readAuthorities(userId);
+        String memberId = user.get("id");
+        Account member = accountMapper.readAccount(memberId);
+        List<String> roles = accountMapper.readAuthorities(memberId);
 
         return jwtTokenProvider.createToken(member.getUsername(), roles);
     }

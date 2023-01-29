@@ -18,7 +18,7 @@ public class TestServiceImpl implements TestService {
     }
 
     @Override
-    public String getTestEmail() {
-        return testMapper.getTestEmail();
+    public String getTestName() {
+        return testMapper.getTestName();
     }
 }
